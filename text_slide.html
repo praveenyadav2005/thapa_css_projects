@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(23, 23, 23);
+            display: grid;
+            place-items: center;
+        }
+        .cont{
+           
+            display: grid;
+            place-items: center;
+        }
+        h1{
+            color: white;
+            font-size: 140px;
+            text-shadow: .5px .5px 5px #ccc;
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            position: relative;
+
+        }
+        h1::before{
+            content: "Praveen...";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border-right: 2px solid yellow;
+           overflow: hidden;
+            color: yellow;
+        animation: move 2s linear infinite alternate;
+
+
+        }
+       
+        @keyframes move {
+            0%{
+            width: 0;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Praveen...</h1>
+    </div>
+</body>
+</html>

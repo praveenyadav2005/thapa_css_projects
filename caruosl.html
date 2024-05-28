@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+        display: grid;
+        place-items: center;
+        border: 2px solid red;
+        
+       & .img-cont{
+        border: 2px solid red;
+        width: 60vw;
+        height: 80vh;
+        border-radius: 10px;
+        background-image: url("../CSS/images/brand.png"),linear-gradient(to right,rgba(255, 192, 203, 0.505),rgba(128, 0, 128, 0.525));
+        background-repeat: no-repeat;
+        background-size: 100%;
+        animation: slide 20s linear 1s infinite normal forwards ;
+        /* filter: opacity(.2); */
+        /* filter: blur(8px); */
+        }
+    }
+    @keyframes slide {
+        0%{
+            background-image: url("../CSS/images/brand.png");
+        }
+        20%{
+            background-image: url("../CSS/images/code.png");
+        }
+        40%{
+            background-image: url("../CSS/images/css.png");
+        }
+        60%{
+            background-image: url("../CSS/images/hero.png");
+        }
+        80%{
+            background-image: url("../CSS/images/dev.png");
+        }
+        100%{
+            background-image:url("../CSS/images/html.png");
+        }
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="img-cont">
+           
+        </div>
+    </div>
+</body>
+</html>
