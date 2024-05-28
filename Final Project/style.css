@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
+  /* border: 2px solid red;  */
 }
 :root {
   --main-heading--color: #004bc4;
@@ -30,27 +30,34 @@ html {
   font-size: 62.5%;
 }
 p,
-a{
+a {
   font-family: "Urbanist", sans-serif;
   padding: 1rem 2rem;
-  letter-spacing: .1rem;
+  /* letter-spacing: .1rem; */
   font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
 }
 .container {
   width: 80vw;
   margin: 0 auto;
-  padding: 4.6rem 4.4rem;
 }
 
-/***** Navbar Section *****/ 
+/***** Navbar Section *****/
 
 header {
-  height: 12vh;
+  /* height: 12vh; */
+
+  padding: 2rem 3rem;
   /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px -10px;
+  /* box-shadow:0px 15px 10px -15px #bbb0b0;  */
 
   & .logo img {
     width: 21rem;
@@ -67,33 +74,33 @@ header {
       & a {
         text-decoration: none;
         font-size: 1.6rem;
-        padding: 0 .25rem;
+        padding: 0 0.25rem;
         text-transform: uppercase;
         font-weight: 600;
         color: var(--heading-color);
         letter-spacing: 1px;
         position: relative;
 
-        &:hover{
-            color:#114088 ;
+        &:hover {
+          color: #114088;
         }
       }
 
-      & a:hover::before{
+      & a:hover::before {
         width: 100%;
       }
       & a::before {
         content: "";
         width: 0%;
-        height: .2rem;
+        height: 0.2rem;
         /* background-image: linear-gradient(to right, pink, purple); */
         background-color: var(--main-color);
         position: absolute;
         left: 0;
-        bottom: -.4rem;
+        bottom: -0.4rem;
         border-radius: 1rem;
-        transition: .3s linear;
-      } 
+        transition: 0.3s linear;
+      }
     }
   }
 }
@@ -101,72 +108,74 @@ header {
 /***** End Navbar Section *****/
 
 /***** Hero Section *****/
-main{
-    width: 100vw;
-    /* height: 85vh; */
-    background-image: linear-gradient(to top right,var(--main-color),var(--supporting-color));
-    position: relative;
+main {
+  /* width: 98.5vw; */
+  width: 100%;
 
+  /* height: 85vh; */
+  background-image: linear-gradient(
+    to top right,
+    var(--main-color),
+    var(--supporting-color)
+  );
+  position: relative;
 
+  & .hero {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 9.6rem;
+    /* perspective: 1000px; */
 
-    & .hero{
-        display:grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 1fr;
-        align-items: center;
-        gap: 2rem;
-        padding-bottom: 9.6rem;
-        /* perspective: 1000px; */
+    & .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem 0rem;
+      align-items: flex-start;
+      justify-content: center;
+      & h1 {
+        font-family: "Poppins", sans-serif;
+        /* color:var(--main-heading--color); */
+        color: var(--hero-heading-color);
+        font-size: 4.5rem;
+        position: relative;
+        padding: 1rem 1rem;
+        padding-left: 0;
+        padding-bottom: 0;
 
-        & .hero-content{
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 1rem 1rem;
-            align-items: flex-start;
-            justify-content: center;
-            & h1{
-                font-family: "Poppins", sans-serif;
-                /* color:var(--main-heading--color); */
-                color: var(--hero-heading-color);
-                font-size: 4.5rem;
-                position: relative;
-                padding: 1rem 1rem;
-                padding-left: 0;
-                padding-bottom: 0;
-
-                &::before{
-                    content:"Empowering lifelong learning" ;
-                    text-transform: uppercase;
-                    position: absolute;
-                    font-size: 1.2rem;
-                    color: var(--bnt-hover-bg-color);
-                    letter-spacing: .3rem;
-                    top: -.7rem;
-                }
-            }
-            & p{
-                color: var(--supporting-color);
-                font-size: 1.4rem;
-                line-height: 2rem;
-                padding-left: 0;
-                padding-top: 0;
-                letter-spacing: .12rem;
-            }
-
-            
+        &::before {
+          content: "Empowering lifelong learning";
+          text-transform: uppercase;
+          position: absolute;
+          font-size: 1.2rem;
+          color: var(--bnt-hover-bg-color);
+          letter-spacing: 0.3rem;
+          top: -0.7rem;
         }
-
-        & .hero-image{
-          padding: 0 1rem;
-
-
-            & img{
-                width: 30vw;
-                transform: rotateY(180deg);
-            }
-        }
+      }
+      & p {
+        color: var(--supporting-color);
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding-left: 0;
+        padding-top: 0;
+        letter-spacing: 0.12rem;
+      }
     }
+
+    & .hero-image {
+      padding: 0 1rem;
+
+      & img {
+        width: 30vw;
+        transform: rotateY(180deg);
+      }
+    }
+  }
 }
 
 /*? Section divider */
@@ -186,38 +195,121 @@ main{
   width: calc(100% + 1.3px);
   height: 100px;
   transform: rotateY(180deg);
-
 }
 
 .custom-shape-divider-bottom-1716724355 .shape-fill {
-  fill: #FFFFFF;
+  fill: #ffffff;
+}
+/***** End Hero Section *****/
+
+/***** About Section *****/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  & .about-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    & p {
+      text-align: start;
+      padding-left: 0;
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding-top: 0.2rem;
+      padding-left: 0rem;
+      text-transform: capitalize;
+    }
+    & h2 {
+      font-size: 2.6rem;
+      line-height: 2;
+      padding: 0.2rem 2rem;
+      padding-left: 0;
+    }
+  }
+
+  & .about-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2.5rem;
+    padding: 1rem 2rem;
+
+    & .features {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem 2rem;
+
+      & h3 {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        padding-bottom: 0;
+        text-transform: capitalize;
+      }
+      & p {
+        text-align: center;
+        letter-spacing: 0.06rem;
+      }
+      & img {
+        width: 7.6vw;
+        padding: 2rem;
+        border-radius: 50%;
+        background-color: var(--supporting-color);
+
+        &:hover {
+          animation: rotate 1s linear 0s 2 alternate;
+          cursor: pointer;
+          background-image: radial-gradient(circle at center,var(--supporting-color),var(--main-color));
+        }
+      }
+    }
+  }
 }
 
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+
+
+/***** End About Section *****/
+
 /*!  Reusable code */
-.btn{
+p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--para-color);
+  padding: 1rem 2rem;
+  letter-spacing: 0.08rem;
+}
+.btn {
   text-decoration: none;
   display: inline-block;
   text-align: center;
   text-transform: capitalize;
   margin-top: 1.7rem;
   font-size: 1.4rem;
-  letter-spacing: .1rem;
-  border-radius: .4rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.4rem;
   width: 10vw;
   padding: 1rem 2rem;
   color: var(--supporting-color);
   background-color: var(--main-color);
-
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--bnt-hover-bg-color);
   cursor: pointer;
   box-shadow: var(--btn-box-shadow);
 }
-
-
-
-/***** End Hero Section *****/
-
-
