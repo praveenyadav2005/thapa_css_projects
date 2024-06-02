@@ -599,7 +599,7 @@ main {
 
 /***** Footer Section *****/
 footer {
-  width: 98.7vw;
+  width: 98.9vw;
   padding-top: 11rem;
   height: 50vh;
   background-color: #252528;
@@ -688,7 +688,6 @@ footer {
   /* border: 2px solid red; */
 }
 .contact {
-
   width: 66vw;
   margin: 0 auto;
   padding: 2rem;
@@ -785,12 +784,91 @@ footer {
     & .map {
       padding: 1rem;
     }
-  }
+  }  
+}
+/***** End Contact us Section *****/
 
+/***** Blog Section *****/ 
+.blog-heading{
+  width: 80vw;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+    & h2 {
+      font-size: 2.7rem;
+      line-height: 2;
+      padding:  0 1rem;
+      font-weight: 600;
+    }
+    & p {
+      font-weight: 600;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
   
 }
+.blog-container *{
+  /* border: 2px solid red; */
+  /* padding: .5rem 1rem; */
+}
+.blog-container{
+width: 80vw;
+margin: 0 auto;
+display: grid;
+padding: 3rem;
 
-/***** End Contact us Section *****/
+grid-template-columns: repeat(4,minmax(25rem,35rem));
+grid-template-rows: repeat(2,30rem);
+gap: 5rem;
+grid-auto-rows: 30rem;
+  & .blog{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: .6rem;
+    /* padding: 1rem; */
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: .15s linear;
+
+    &:hover{
+      scale: 1.05;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    & .blog-img{
+      
+      & img{
+        width: 100%;
+    border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
+
+        /* padding: .5rem; */
+      }
+    }
+    & .mid-blog{
+     
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+      /* justify-content: space-evenly; */
+
+      & p{
+        display: inline-block;
+      }
+      
+    }
+    & .blog-tittle{
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+
+
+/***** End Blog Section *****/
+
 
 /*!  Reusable code */
 p {
